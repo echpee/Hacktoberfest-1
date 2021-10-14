@@ -99,7 +99,7 @@ h2 {
         transform: translateX(-5px);
     }
     100% {
-        transform: translateX(0px);
+        transform: translateX(0);
     }
 }
 
@@ -128,7 +128,7 @@ h2 {
 
 .form-control .errorMessage {
     visibility: hidden;
-    margin: 2px 0 12px 0;
+    margin: 2px 0 12px;
     font-weight: bold;
     font-size: 11px;
 }
