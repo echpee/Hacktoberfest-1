@@ -41,26 +41,3 @@ function increment(board) {
     return newBoard
 }
 console.log(increment(board))
-
-function findMine(grid) {
-    const changeMineToX = grid.map((row) => {
-        return row.map((cell) => {
-            if (cell === 1) {
-                return 'x'
-            } else {
-                return 0
-            }
-        })
-    })
-
-    const mineCheckerAfterChange = changeMineToX.map((row, y) => {
-        return row.map((cell, row) => {
-            if (cell === 'x') {
-                return 'x'
-            } else {
-                return mineSweep(changeMineToX, y, row)
-            }
-        })
-    })
-    return mineCheckerAfterChange
-}
